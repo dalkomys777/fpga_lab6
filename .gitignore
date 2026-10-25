@@ -12,3 +12,4 @@
 *.sim/
 *.gen/
 reports/**/*.hwpx
+reports/**/*.pdf
