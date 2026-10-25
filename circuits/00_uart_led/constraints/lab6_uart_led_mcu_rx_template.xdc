@@ -1,0 +1,11 @@
+set_property PACKAGE_PIN B6 [get_ports clk_50mhz]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_50mhz]
+create_clock -period 20.000 -name sys_clk [get_ports clk_50mhz]
+set_property PACKAGE_PIN K4 [get_ports rst_p]
+set_property IOSTANDARD LVCMOS33 [get_ports rst_p]
+# 아래 MCU_RX_PACKAGE_PIN을 교재의 실제 확장 GPIO FPGA 핀으로 바꾼다.
+# set_property PACKAGE_PIN MCU_RX_PACKAGE_PIN [get_ports uart_rxd]
+set_property PACKAGE_PIN F6 [get_ports uart_txd]
+set_property IOSTANDARD LVCMOS33 [get_ports {uart_rxd uart_txd}]
+set_property PACKAGE_PIN N5 [get_ports {led_out[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_out[0]}]

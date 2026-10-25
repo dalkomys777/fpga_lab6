@@ -1,0 +1,244 @@
+{
+  "folders": [
+    {
+      "name": "FPGA LAB6",
+      "path": "."
+    },
+    {
+      "name": "00_uart_led",
+      "path": "circuits/00_uart_led"
+    },
+    {
+      "name": "01_servo",
+      "path": "circuits/01_servo"
+    },
+    {
+      "name": "02_sram",
+      "path": "circuits/02_sram"
+    },
+    {
+      "name": "03_dac",
+      "path": "circuits/03_dac"
+    },
+    {
+      "name": "STM32 ece2_474",
+      "path": "../ece2_474"
+    }
+  ],
+  "settings": {
+    "editor.fontSize": 18,
+    "editor.minimap.enabled": false,
+    "files.associations": {
+      "*.v": "verilog"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "hudson-river-trading.vscode-slang",
+      "lramseyer.vaporview"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "00_uart_led - simulate",
+        "type": "process",
+        "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "args": [
+          "tools/fpga_lab.py",
+          "simulate"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:00_uart_led}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "00_uart_led - wave",
+        "type": "process",
+        "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "args": [
+          "tools/fpga_lab.py",
+          "wave"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:00_uart_led}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "01_servo - simulate",
+        "type": "process",
+        "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "args": [
+          "tools/fpga_lab.py",
+          "simulate"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:01_servo}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "01_servo - wave",
+        "type": "process",
+        "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "args": [
+          "tools/fpga_lab.py",
+          "wave"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:01_servo}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "02_sram - simulate",
+        "type": "process",
+        "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "args": [
+          "tools/fpga_lab.py",
+          "simulate"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:02_sram}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "02_sram - wave",
+        "type": "process",
+        "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "args": [
+          "tools/fpga_lab.py",
+          "wave"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:02_sram}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "03_dac - simulate",
+        "type": "process",
+        "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "args": [
+          "tools/fpga_lab.py",
+          "simulate"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:03_dac}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "03_dac - wave",
+        "type": "process",
+        "command": "C:/Users/young/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "args": [
+          "tools/fpga_lab.py",
+          "wave"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:03_dac}"
+        },
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated",
+          "clear": true
+        }
+      },
+      {
+        "label": "STM32 task5 - Activate and Build",
+        "type": "process",
+        "command": "powershell.exe",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "${workspaceFolder:FPGA LAB6}/stm32/tools/activate_and_build.ps1",
+          "-Task",
+          "task5"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:FPGA LAB6}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "STM32 task6 - Activate and Build",
+        "type": "process",
+        "command": "powershell.exe",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "${workspaceFolder:FPGA LAB6}/stm32/tools/activate_and_build.ps1",
+          "-Task",
+          "task6"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:FPGA LAB6}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "STM32 task7 - Activate and Build",
+        "type": "process",
+        "command": "powershell.exe",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "${workspaceFolder:FPGA LAB6}/stm32/tools/activate_and_build.ps1",
+          "-Task",
+          "task7"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder:FPGA LAB6}"
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+}
